@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Amigurumis</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- El contenido se mantiene oculto hasta validar el rol -->
+    <div id="admin-container" style="display: none;">
+
+        <header class="header">
+            <div class="nav-left">
+                <h2>Panel Administrador</h2>
+            </div>
+            <div class="nav-center">
+                <img src="../assets/img/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="nav-right">
+                <a href="../index.html" class="nav-btn" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">
+                  <i class="fa-solid fa-store" style="margin-right: 5px;"></i> Ir a Tienda
+                </a>
+                <button id="btn-logout" class="nav-btn">Cerrar Sesión</button>
+            </div>
+        </header>
+
+        <main class="admin-main">
+            <!-- SECCIÓN 1: AGREGAR PRODUCTO -->
+            <section class="admin-section">
+                <h3><i class="fa-solid fa-plus"></i> Añadir Nuevo Producto</h3>
+                <form id="form-producto" class="admin-form">
+                    <input type="text" id="prod-nombre" placeholder="Nombre del amigurumi" required>
+                    <input type="number" id="prod-precio" placeholder="Precio (COP)" required>
+                    <select id="prod-categoria">
+                        <option value="amigurumis">Amigurumi</option>
+                        <option value="accesorios">Accesorio</option>
+                    </select>
+                    <!-- Selector de archivo local -->
+                    <input type="file" id="prod-imagen-archivo" accept="image/*" required>
+ <!-- Medidas del producto -->
+<div class="form-group">
+  <label for="prod-medidas">Medidas del producto:</label>
+  <input type="text" id="prod-medidas" placeholder="Ej: 18 cm de alto x 10 cm de ancho" required>
+</div>
+
+<!-- Descripción del producto -->
+<div class="form-group">
+  <label for="prod-descripcion">Descripción detallada:</label>
+  <textarea id="prod-descripcion" rows="3" placeholder="Escribe los detalles, tipo de hilo, relleno, etc." required></textarea>
+</div>
+                    <button type="submit" class="btn-guardar">Guardar Producto</button>
+                </form>
+                
+            </section>
+
+            <!-- SECCIÓN 2: GESTIONAR PRODUCTOS -->
+            <section class="admin-section">
+                <h3><i class="fa-solid fa-boxes-stacked"></i> Productos en Tienda</h3>
+                <div id="lista-productos" class="admin-grid">
+                    <!-- Carga dinámica con JavaScript -->
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: PEDIDOS -->
+            <section class="admin-section">
+                <h3><i class="fa-solid fa-receipt"></i> Pedidos Recibidos</h3>
+                <div id="lista-pedidos">
+                    <p class="texto-vacio">No hay pedidos pendientes por procesar.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="../assets/js/admin.js"></script>
+</body>
+</html>

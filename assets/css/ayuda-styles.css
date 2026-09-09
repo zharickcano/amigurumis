@@ -1,0 +1,133 @@
+:root {
+  --color-cafe-rojizo: #7a3e2e;
+  --color-cafe-suave: #a06b52;
+  --bg-pagina: #f7f2eb;
+  --bg-card: #ffffff;
+  --border-suave: #e8ded2;
+  --texto-oscuro: #4a3b32;
+}
+
+body {
+  background-color: var(--bg-pagina);
+  color: var(--texto-oscuro);
+}
+
+/* CONTENEDOR PRINCIPAL */
+.ayuda-container {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.ayuda-container h1 {
+  text-align: center;
+  color: var(--color-cafe-rojizo);
+  font-size: 2.1rem;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.ayuda-container h1::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: var(--color-cafe-rojizo);
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* TARJETAS ESTILIZADAS */
+.ayuda-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-suave);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(122, 62, 46, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ayuda-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(122, 62, 46, 0.1);
+}
+
+/* ENCABEZADOS E ICONOS */
+.ayuda-card h2 {
+  color: var(--color-cafe-rojizo);
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 2px dashed #f0e6dc;
+  padding-bottom: 12px;
+}
+
+.ayuda-card h2 i {
+  background-color: #f4ece1;
+  color: var(--color-cafe-rojizo);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* CONTENIDO Y TEXTOS */
+.ayuda-card p {
+  line-height: 1.7;
+  color: #5a4b41;
+  margin-bottom: 10px;
+  font-size: 0.98rem;
+}
+
+.ayuda-card p strong {
+  color: var(--color-cafe-rojizo);
+}
+
+/* LISTA DE GUÍA DE CUIDADO */
+.ayuda-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 10px 0 0 0;
+}
+
+.ayuda-card ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #5a4b41;
+}
+
+.ayuda-card ul li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--color-cafe-suave);
+  font-size: 1.05rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .ayuda-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .ayuda-card {
+    padding: 20px;
+  }
+
+  .ayuda-card h2 {
+    font-size: 1.1rem;
+  }
+}

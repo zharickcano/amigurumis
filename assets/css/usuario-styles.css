@@ -1,0 +1,79 @@
+.usuario-main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.usuario-card, .usuario-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.perfil-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-icon {
+  font-size: 3.5rem;
+  color: var(--color-cafe-rojizo);
+}
+
+.usuario-section h3 {
+  color: var(--color-cafe-rojizo);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.usuario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 15px;
+}
+
+.user-item-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.user-item-card img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.user-item-card .info {
+  flex: 1;
+}
+
+.btn-quitar {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.resumen-total {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 1.1rem;
+  color: var(--texto-oscuro);
+}
+
+.texto-vacio {
+  color: #888;
+  font-style: italic;
+}

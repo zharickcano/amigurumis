@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Amigurumis</title>
+    <!-- Enlazamos tu archivo de estilos -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Librería para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- ENCABEZADO CON NAVEGACIÓN VINCULADA -->
+<header class="header">
+    <div class="nav-left">
+        <button class="nav-btn active" data-categoria="todo">todo</button>
+        <button class="nav-btn" data-categoria="accesorios">accesorios</button>
+        <button class="nav-btn" data-categoria="amigurumis">amigurumis</button>
+    </div>
+    <div class="nav-center">
+        <a href="index.html">
+            <img src="assets/img/logo.png" alt="Logo Amigurumis" class="logo">
+        </a>
+    </div>
+<div class="nav-right">
+  <!-- ÍCONO DE USUARIO / MENÚ DESPLEGABLE -->
+  <div id="user-menu-container">
+    <a href="pages/login.html" id="btn-user-icon" class="icon-link">
+      <i class="fa-regular fa-user"></i>
+    </a>
+  </div>
+ <div class="search-box">
+  <input type="text" id="input-busqueda" placeholder="Buscar por nombre, precio, categoría...">
+  <button type="button" id="btn-buscar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+</div>
+  <i class="fa-solid fa-bag-shopping"></i>
+</div>
+</header>
+
+    <!-- IMAGEN PRINCIPAL (HERO) -->
+    <section class="hero">
+        <!-- Reemplaza esta URL con la imagen de tus amigurumis en grupo -->
+        <img src="assets/img/amigurumis.jpg" alt="Colección de amigurumis" class="hero-img">
+    </section>
+
+    <!-- CATÁLOGO DE PRODUCTOS -->
+    <main class="catalogo">
+        <!-- Tarjeta de Producto 1 -->
+        <div class="producto-card">
+            <h3 class="producto-titulo">Hipopotamo Amigurumi</h3>
+            <!-- Reemplaza con la foto de tu hipopótamo -->
+            <img src="assets/img/Hipopotamo_Ami.jpg" alt="Hipopótamo" class="producto-img">
+            <div class="producto-footer">
+                <span class="precio">50.000</span>
+                <i class="fa-solid fa-heart corazon"></i>
+            </div>
+        </div>
+
+    </main>
+
+ <!-- PIE DE PÁGINA RESTRUCTURADO -->
+<!-- FOOTER CON LOGO Y DESPLEGABLE DE CONTACTO -->
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Logo del footer -->
+    <img src="assets/img/logo.png" alt="Logo Tienda" class="footer-logo">
+
+    <div class="footer-links">
+      <a href="pages/sobre-marca.html">Sobre la marca</a>
+      <a href="pages/ayuda.html">Ayuda</a>
+
+      <!-- Menú Desplegable de Contacto -->
+      <div class="footer-contacto-dropdown">
+        <button type="button" class="footer-contacto-btn">
+          Contacto <i class="fa-solid fa-chevron-up"></i>
+        </button>
+        <div class="footer-contacto-list">
+        <a href="https://wa.me/573044725378?text=Hola,%20me%20gustaria%20solicitar%20un%20pedido%20personalizado" target="_blank" rel="noopener noreferrer">
+  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+</a>
+          <a href="https://instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="copyright">&copy; 2026 Tienda Amigurumis - Tejidos con el corazón</p>
+</footer>
+
+    <!-- CONEXIÓN A FIREBASE -->
+    <script type="module" src="assets/js/app.js"></script>
+<!-- BURBUJAS FLOTANTES (REDES SOCIALES) -->
+<div class="social-floating">
+ <a href="https://wa.me/573044725378?text=Hola,%20me%20gustaria%20solicitar%20un%20pedido%20personalizado" target="_blank" rel="noopener noreferrer" class="btn-float whatsapp" title="Pedido personalizado">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+  <a href="https://instagram.com/byangelnativo" target="_blank" rel="noopener noreferrer" class="btn-float instagram" title="Síguenos en Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,559 @@
+/* Paleta de colores basada en tu diseño */
+:root {
+    --bg-crema: #fdfaf6;
+    --color-cafe-claro: #cba883;
+    --color-cafe-rojizo: #974d41;
+    --color-tarjeta: #e5cdb2;
+    --texto-oscuro: #4a2f26;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-crema);
+    color: var(--texto-oscuro);
+}
+/* ESTRUCTURA Y ALINEACIÓN DE LA BARRA DE NAVEGACIÓN header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: var(--color-cafe-claro);
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.nav-center .logo {
+    height: 70px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    flex: 1;
+}
+
+.nav-right i, 
+.nav-right .icon-link {
+    font-size: 1.3rem;
+    color: var(--texto-oscuro);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.nav-right i:hover, 
+.nav-right .icon-link:hover {
+    color: var(--color-cafe-rojizo);
+}
+/* Agregamos margen a la sección de la foto para que el menú no la tape */
+.hero {
+    margin-top: 120px; /* 80px del menú + 40px de separación visual */
+}
+
+.logo {
+    height: 90px; 
+    border-radius: 50%;
+    margin-top: 15px;
+    transition: all 0.3s ease; /* Efecto suave para el logo */
+}
+
+.nav-right i {
+    font-size: 1.5rem;
+    margin-left: 20px;
+    color: var(--texto-oscuro);
+    cursor: pointer;
+}
+
+/* Estas clases se activarán con JavaScript al bajar */
+.header.scrolled {
+    height: 60px; /* Menú más delgado */
+    padding: 5px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Agrega una sombrita elegante */
+}
+
+.header.scrolled .logo {
+    height: 60px; /* Logo más pequeño */
+    margin-top: 5px;
+}
+
+/* Hero Image (Foto Grande) */
+/* Eliminar margen inferior del header */
+header.header {
+  margin-bottom: 0 !important;
+}
+
+/* Pegar la sección Hero al borde superior sin margen */
+.hero {
+  width: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0; /* Elimina el espacio blanco inferior de las imágenes en línea */
+}
+
+.hero-img {
+  width: 100%;
+  display: block;
+  height: auto;
+  max-height: 450px; /* Ajusta la altura según la estética de tu página */
+  object-fit: cover;
+}
+/* Catálogo */
+.catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.producto-card {
+    background-color: var(--color-tarjeta);
+    border-radius: 20px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.producto-titulo {
+    font-size: 1rem;
+    margin: 0 0 10px 0;
+    font-weight: bold;
+}
+
+.producto-img {
+    width: 100%;
+    border-radius: 15px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.producto-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.precio {
+    background-color: var(--color-cafe-rojizo);
+    color: white;
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.corazon {
+    color: var(--color-cafe-rojizo);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* FOOTER ALINEADO A LA IZQUIERDA CON ESPACIADO */
+.footer {
+    background-color: var(--color-cafe-claro);
+    padding: 25px 40px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centra el bloque contenedor en la pantalla */
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Espacio entre el logo y las opciones */
+    width: 100%;
+    max-width: 1100px;
+}
+
+.footer-logo {
+    height: 65px;
+    border-radius: 50%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 35px; /* Espaciado individual entre contacto, ayuda y sobre la marca */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--texto-oscuro);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-cafe-rojizo);
+}
+/* Estas clases se activarán con JavaScript al bajar */
+.header.scrolled {
+    height: 60px; /* Menú más delgado */
+    padding: 5px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Agrega una sombrita elegante */
+}
+
+.header.scrolled .logo {
+    height: 60px; /* Logo más pequeño */
+    margin-top: 5px;
+}
+
+/* BOTONES DE NAVEGACIÓN (todo, accesorios, amigurumis) */
+.nav-left {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background-color: var(--bg-crema);
+    color: var(--texto-oscuro);
+    border: 2px solid var(--color-cafe-rojizo);
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background-color: var(--color-cafe-rojizo);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.icon-link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.icon-link:hover {
+    color: var(--color-cafe-rojizo);
+}
+
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a, 
+.dropdown-content button {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover, 
+.dropdown-content button:hover {
+  background-color: #f1f1f1;
+}
+
+/* Estilos para limpiar el botón del usuario en el header */
+.user-btn {
+  background: transparent;
+  border: none;
+  color: var(--texto-oscuro);
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.user-btn:hover {
+  color: var(--color-cafe-rojizo);
+}
+/* Cuadrícula organizada para el catálogo */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Tarjeta del producto */
+.producto-card {
+  background-color: #f4ece1;
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Control estricto de la imagen para evitar desbordes */
+.producto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Footer con precio y botón de favorito */
+.prod-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+/* Botón Ver Detalles en las tarjetas del catálogo */
+.prod-footer a {
+  background-color: var(--color-cafe-rojizo, #7a3e2e);
+  color: #ffffff !important;
+  padding: 8px 14px;
+  border-radius: 20px;
+  text-decoration: none !important;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+/* Efecto al pasar el mouse */
+.prod-footer a:hover {
+  background-color: #5a2d21;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+/* Barra de Búsqueda */
+/* Contenedor desplegable de búsqueda */
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 5px 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Icono de la lupa */
+.search-box button {
+  background: transparent;
+  border: none;
+  color: var(--color-cafe-rojizo, #7a3e2e);
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Campo de entrada colapsado por defecto */
+.search-box input {
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.85rem;
+  color: var(--texto-oscuro);
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Al pasar el cursor (:hover) O al hacer clic para escribir (:focus-within) */
+.search-box:hover,
+.search-box:focus-within {
+  background-color: #ffffff;
+  border-color: #e0d5c8;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  padding: 5px 12px;
+}
+
+.search-box:hover input,
+.search-box:focus-within input {
+  width: 180px; /* Ancho del campo desplegado */
+  opacity: 1;
+  padding-left: 8px;
+}
+
+/* BURBUJAS FLOTANTES LATERALES */
+.social-floating {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
+
+.btn-float {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  text-decoration: none !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-float.whatsapp {
+  background-color: #25d366;
+}
+
+.btn-float.instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+/* DESPLEGABLE DE CONTACTO EN EL FOOTER */
+.footer-contacto-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-contacto-btn {
+  background: transparent;
+  border: none;
+  color: var(--texto-oscuro, #4a3b32);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  font-family: inherit;
+}
+
+.footer-contacto-list {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border: 1px solid #e0d5c8;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 150px;
+  z-index: 100;
+}
+
+/* Mostrar lista al pasar el cursor */
+/* Se muestra solo cuando tiene la clase 'active' mediante clic */
+.footer-contacto-dropdown.active .footer-contacto-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-contacto-list a {
+  padding: 8px 16px;
+  color: var(--texto-oscuro, #4a3b32);
+  text-decoration: none !important;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.footer-contacto-list a:hover {
+  background-color: var(--bg-crema, #f4ece1);
+  color: var(--color-cafe-rojizo, #7a3e2e);
+}
+
+/* Estilos del Footer y Logo */
+.footer {
+  background-color: var(--color-bg-footer, #d1b493);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.footer-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}

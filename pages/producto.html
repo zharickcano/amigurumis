@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto - Amigurumis</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/producto-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAV / HEADER -->
+    <header class="header">
+        <div class="nav-left">
+            <a href="../index.html" class="nav-btn" style="text-decoration: none; display: inline-flex; align-items: center;">
+                <i class="fa-solid fa-arrow-left" style="margin-right: 5px;"></i> Volver a Tienda
+            </a>
+        </div>
+        <div class="nav-center">
+            <img src="../assets/img/logo.png" alt="Logo" class="logo">
+        </div>
+        <div class="nav-right">
+            <a href="login.html" id="btn-user-icon"><i class="fa-solid fa-user"></i></a>
+        </div>
+    </header>
+
+    <main class="producto-main">
+        <!-- DETALLE DEL PRODUCTO (IZQ: IMAGEN, DER: INFO) -->
+        <section class="detalle-producto-container">
+            <div class="detalle-imagen">
+                <img id="prod-img" src="" alt="Cargando producto...">
+            </div>
+            <div class="detalle-info">
+                <span id="prod-categoria" class="prod-tag-cat">Cargando...</span>
+                <h1 id="prod-nombre">Cargando...</h1>
+                <p id="prod-precio" class="prod-precio-destacado">$0 COP</p>
+                
+                <div class="prod-medidas-box">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <strong>Medidas:</strong> <span id="prod-medidas">Cargando...</span>
+                </div>
+
+                <div class="prod-descripcion-box">
+                    <h3>Descripción</h3>
+                    <p id="prod-descripcion">Cargando detalles...</p>
+                </div>
+
+                <div class="prod-acciones">
+                    <button id="btn-add-cart" class="btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i> Añadir al Carrito
+                    </button>
+                    <button id="btn-add-fav" class="btn-secondary">
+                        <i class="fa-solid fa-heart"></i> Guardar en Favoritos
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separador-secciones">
+
+        <!-- RECOMENDADOS (MISMA CATEGORÍA) -->
+        <section class="seccion-relacionados">
+            <h2><i class="fa-solid fa-star"></i> Recomendados de esta categoría</h2>
+            <div id="grid-recomendados" class="catalogo">
+                <p class="texto-vacio">Cargando recomendaciones...</p>
+            </div>
+        </section>
+
+        <!-- TAMBIÉN PUEDE INTERESARTE (OTRAS CATEGORÍAS) -->
+        <section class="seccion-relacionados">
+            <h2><i class="fa-solid fa-sparkles"></i> También podría interesarte</h2>
+            <div id="grid-interesantes" class="catalogo">
+                <p class="texto-vacio">Cargando sugerencias...</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Tienda Amigurumis - Tejidos con el corazón</p>
+    </footer>
+
+    <script type="module" src="../assets/js/producto.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+.admin-main {
+    max-width: 1000px;
+    margin: 120px auto 40px auto;
+    padding: 0 20px;
+}
+
+.admin-section {
+    background-color: var(--bg-crema);
+    border: 2px solid var(--color-tarjeta);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.admin-section h3 {
+    color: var(--color-cafe-rojizo);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.admin-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.admin-form input, 
+.admin-form select {
+    padding: 12px;
+    border: 1px solid var(--color-cafe-claro);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.btn-guardar {
+    grid-column: span 2;
+    background-color: var(--color-cafe-rojizo);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-guardar:hover {
+    background-color: #7a3d33;
+}
+
+.admin-prod-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+}
+
+.admin-prod-card img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.btn-eliminar {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
